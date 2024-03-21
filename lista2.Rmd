@@ -47,7 +47,7 @@ for (i in 1:mc) {
   est_teste_frt_mc[i] <- tau_permut/sqrt(s2_1/n1 + s2_0/n0) # estatistica do teste da permutação
 }
 
-pvalor_frt_mc <- mean(abs(est_teste_frt_mc) >= abs(est_teste_frt)); pvalor_frt_mc
+pvalor_frt_mc <- mean(abs(est_teste_frt_mc) >= abs(est_teste_frt))
 # H0: não existe efeito causal
 
 est_test_frt_classico_t <- t.test(y[z == 1], y[z == 0], var.equal = FALSE)$statistic
